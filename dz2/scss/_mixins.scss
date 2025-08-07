@@ -1,0 +1,21 @@
+@mixin desktop1920 {
+  @media screen and (max-width 1920px: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin tablet1280 {
+  @media screen and (max-width 1280px: $breakpoint-tablet) {
+    @content;
+  }
+}
+@mixin tablet960 {
+  @media screen and (max-width 960px: $breakpoint-tablet) {
+    @content;
+  }
+}
+@mixin mobile480 {
+  @media screen and (max-width 480px: $breakpoint-mobile) {
+    @content;
+  }
+}
