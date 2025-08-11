@@ -1,0 +1,16 @@
+body {
+  background-color: red;
+}
+
+.menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30px;
+  height: 25px;
+  margin-top: 60px;
+  margin-left: 40px;
+}
+.menu-container .menu-check {
+  display: none;
+}

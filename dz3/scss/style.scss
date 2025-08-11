@@ -1,0 +1,128 @@
+$desktop: 1920px;
+$tablet: 960px;
+$mobile: 360px;
+
+$font-main: Arial, sans-serif;
+$color-text: #333;
+$color-subtext: #777;
+$color-border: #ddd;
+$color-bg: #fff;
+
+body {
+  font-family: $font-main;
+  background: $color-bg;
+  margin: 0;
+  padding: 0;
+}
+
+.faq {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+
+  h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: $color-subtext;
+    margin-bottom: 30px;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid $color-border;
+
+    input {
+      display: none;
+    }
+
+    .faq-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      font-weight: bold;
+      cursor: pointer;
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          background: $color-text;
+          transition: 0.3s;
+        }
+
+        &::before {
+          top: 9px;
+          left: 0;
+          right: 0;
+          height: 2px;
+        }
+
+        &::after {
+          left: 9px;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+        }
+      }
+    }
+
+    .faq-content {
+      display: none;
+      padding: 0 0 15px;
+      color: $color-subtext;
+    }
+
+    input:checked + .faq-title {
+      .icon::after {
+        transform: scaleY(0);
+      }
+    }
+
+    input:checked ~ .faq-content {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .faq {
+    max-width: 900px;
+
+    h2 {
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width: $tablet) and (min-width: $mobile + 1) {
+  .faq {
+    padding: 30px 15px;
+
+    h2 {
+      font-size: 26px;
+    }
+  }
+}
+@media (max-width: $mobile) {
+  .faq {
+    padding: 20px 10px;
+
+    h2 {
+      font-size: 22px;
+    }
+
+    .faq-title {
+      font-size: 14px;
+    }
+  }
+}
