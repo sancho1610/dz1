@@ -1,0 +1,85 @@
+.primer2 {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+      grid-template-areas: "header" "header" "header" "header" "sidebar main main main" "footer footer footer footer";
+}
+
+@media screen and (max-width: 500px) {
+  .primer2 {
+        grid-template-areas: "header" "sidebar" "main" "footer";
+  }
+}
+.header,
+.main,
+.sidebar,
+.footer {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.header {
+  background-color: aqua;
+}
+
+.sidebar {
+  background-color: green;
+}
+
+.main {
+  background-color: red;
+}
+
+.footer {
+  background-color: blue;
+}
+
+.primer3 {
+  display: -ms-grid;
+  display: grid;
+  gap: 25px;
+}
+.primer3 .card {
+  background-color: bisque;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.primer3 .card :hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.primer3 .card :hover .img {
+  height: 150px;
+  background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.primer3 .card :hover .img .info {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.primer3 .card :hover .img .info .title {
+  font-weight: bold;
+}
+.primer3 .card :hover .img .info .title .price {
+  color: red;
+}

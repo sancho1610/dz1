@@ -1,0 +1,89 @@
+.main-layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "hero"
+    "services"
+    "portfolio"
+    "about"
+    "footer";
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+}
+.hero {
+  grid-area: hero;
+  text-align: center;
+  padding: 40px;
+  background: #2563eb;
+  color: #fff;
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #3b82f6;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+.services {
+  text-align: center;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: darkgreen;
+  gap: 30px;
+  padding: 20px;
+  
+  .card {
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    }
+  }
+}
+.portfolio {
+  text-align: center;
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-weight: bold;
+  text-align: center;
+  background-color: rebeccapurple;
+  border-radius: 8px;
+  gap: 25px;
+  padding: 20px;
+
+  .work {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    }
+  }
+}
+.about-section {
+  display: grid;
+  background-color: darkcyan;
+  color: white;
+  font-weight: bold;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+.footer {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}

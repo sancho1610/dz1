@@ -1,0 +1,100 @@
+.main-layout {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header" "hero" "services" "portfolio" "about" "footer";
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+  grid-template-columns: 1fr auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+}
+
+.hero {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: hero;
+  text-align: center;
+  padding: 40px;
+  background: #2563eb;
+  color: #fff;
+}
+.hero button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.services {
+  text-align: center;
+}
+.services .services-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: darkgreen;
+  gap: 30px;
+  padding: 20px;
+}
+.services .services-grid .card {
+  font-weight: bold;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.portfolio {
+  text-align: center;
+}
+.portfolio .portfolio-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 25px 1fr 25px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  font-weight: bold;
+  text-align: center;
+  background-color: rebeccapurple;
+  border-radius: 8px;
+  gap: 25px;
+  padding: 20px;
+}
+.portfolio .portfolio-grid .work {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.about-section {
+  display: -ms-grid;
+  display: grid;
+  background-color: darkcyan;
+  color: white;
+  font-weight: bold;
+  -ms-grid-columns: 1fr 40px 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+.footer {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}

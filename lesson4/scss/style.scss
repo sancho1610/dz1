@@ -1,0 +1,78 @@
+body {
+
+}
+
+.primer2 {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+  "header" "header" "header" "header"
+  "sidebar main main main"
+  "footer footer footer footer";
+}
+
+@media screen and (max-width: 500px) {
+  .primer2 {
+    grid-template-areas:
+  "header"
+  "sidebar"
+  "main"
+  "footer";
+  }
+}
+
+.header,
+.main,
+.sidebar,
+.footer {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.header {
+  background-color: aqua;
+}
+.sidebar {
+  background-color: green;
+}
+.main {
+  background-color: red;
+}
+.footer {
+  background-color: blue;
+}
+
+.primer3 {
+  display: grid;
+  gap: 25px;
+  .card {
+    background-color: bisque;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    :hover {
+      transform: translateY(-10px);
+      .img {
+        height: 150px;
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .info {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .title {
+            font-weight: bold;
+            .price {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
